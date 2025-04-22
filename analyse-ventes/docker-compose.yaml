@@ -1,0 +1,26 @@
+services:
+  sqlite-db:
+    image: keinos/sqlite3:latest
+    container_name: sqlite_service
+    volumes:
+      - sqlite_data:/data
+    working_dir: /data
+    command: sh
+    stdin_open: true
+    tty: true
+
+  java-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: script_service
+    depends_on:
+      - sqlite-db
+    volumes:
+      - sqlite_data:/data
+    ports:
+      - "8080:8080"
+    command: ["java", "-jar", "app.jar"]
+
+volumes:
+  sqlite_data:
