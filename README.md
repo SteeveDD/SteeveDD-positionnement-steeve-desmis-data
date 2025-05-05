@@ -20,7 +20,7 @@ Ce projet met en œuvre une architecture à deux services conteneurisés avec Do
     cd analyse-ventes
     ```
 
-2.  **Construire les images et démarrer les conteneurs (lancez docker au préalable et fermer tout les projet utilisant le port : 8080):**
+2.  **Construire les images et démarrer les conteneurs (lancez docker au préalable et fermez tout les projets utilisant le port : 8080):**
     ```
     docker-compose up --build -d
     ```
