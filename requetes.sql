@@ -62,7 +62,7 @@ CREATE TABLE IF NOT EXISTS total_produit (
 -- Requête pour obtenir la période des ventes
 SELECT MIN(date) AS date_debut, MAX(date) AS date_fin FROM ventes;
 
--- Requête pour vérifier si le CA total pour une période existe déjà
+-- Requête pour vérifier si le CA total pour une période existe déjà 
 SELECT id FROM total_ca WHERE date_debut = ? AND date_fin = ?;
 
 -- Requête pour obtenir le chiffre d'affaires total
@@ -101,7 +101,7 @@ INSERT INTO total_region (nom_region, region_ca, date_debut, date_fin, date_enre
 
 
 
-
+-- Remplacer les ? par les valeurs attendues
 -- Requête pour sélectionner un produit par référence
 SELECT nom, prix, stock FROM main.produits WHERE reference = ?;
 
@@ -114,8 +114,10 @@ INSERT INTO produits (nom, reference, prix, stock) VALUES (?, ?, ?, ?);
 
 
 
--- Requête pour sélectionner une vente par date, référence produit, quantité et ID magasin
+-- Requête pour sélectionner une vente par date, référence produit, quantité et ID magasin [date(yyyy-mm-dd)]
 SELECT * FROM ventes WHERE date = ? AND ref_produit = ? AND quantite = ? AND id_magasin = ?;
+--Exemple :
+SELECT * FROM ventes WHERE date = '2023-05-27' AND ref_produit = 'REF001' AND quantite = 5 AND id_magasin = 1;
 
 -- Requête pour insérer une nouvelle vente
 INSERT INTO ventes (date, ref_produit, quantite, id_magasin) VALUES (?, ?, ?, ?);

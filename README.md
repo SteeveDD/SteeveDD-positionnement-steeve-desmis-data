@@ -16,8 +16,8 @@ Ce projet met en œuvre une architecture à deux services conteneurisés avec Do
     ```
 1.  **Accéder au fichier Docker et Docker-Compose :**
     ```
-    cd positionnement-steeve-desmis-data
-    cd analyse-vente
+    cd SteeveDD-positionnement-steeve-desmis-data
+    cd analyse-ventes
     ```
 
 2.  **Construire les images et démarrer les conteneurs :**
@@ -48,8 +48,8 @@ Pour interagir avec la base de données SQLite, vous pouvez exécuter l'interpr�
     sqlite3 /data/database.db
     ```
     Vous serez alors dans l'invite de commandes SQLite, où vous pourrez exécuter des requêtes SQL directement sur la base de données. Par exemple :
+
     ```sql
-    .tables
     SELECT * FROM ventes LIMIT 10;
     ```
     Pour quitter l'interpréteur SQLite, tapez `.exit`. Pour quitter le shell du conteneur, tapez `exit`.
