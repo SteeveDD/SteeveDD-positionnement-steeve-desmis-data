@@ -12,7 +12,7 @@ Ce projet met en œuvre une architecture à deux services conteneurisés avec Do
 
 0.  **Cloner le dépôt (si ce n'est pas déjà fait) :**
     ```
-    git clone https://github.com/SteeveDD/positionnement-steeve-desmis-data.git
+    git clone https://github.com/SteeveDD/SteeveDD-positionnement-steeve-desmis-data.git
     ```
 1.  **Accéder au fichier Docker et Docker-Compose :**
     ```
